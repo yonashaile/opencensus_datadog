@@ -78,7 +78,7 @@ report(Spans, #{
             end
     catch
         error:Error ->
-            ?LOG_ERROR("DD: Can't spans encode to json: ~p", [Error])
+            ?LOG_ERROR("DD: Can't spans encode to json: ~p, Span is: ~p", [Error, DSpans])
     end.
 
 default_client(Address, Headers, JSON) ->
